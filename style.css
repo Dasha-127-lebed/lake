@@ -1,3 +1,10 @@
+@font-face {
+	font-family: "Pudelinka";
+	src: url("Fonts/pudelinka.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	background-color: #d2b48c;
 	margin-left: 20%;
@@ -8,7 +15,11 @@ body {
 }
 
 blockquote.q {
-	color: #D4AF37;          /* золотой (золотой цвет, как у золотой медали) */
-	border-left: 4px solid #8B0000; /* тёмно-бордовый/тёмно-красный */
+	color: #D4AF37;          /* золотой */
+	border-left: 4px solid #8B0000; /* тёмно-красный */
 	font-style: italic;
+}
+
+p.quote {
+	font-family: "Pudelinka", cursive;
 }
