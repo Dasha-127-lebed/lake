@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎄 Christmas Crossword Puzzle 🎄</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      text-align: center;
+      padding: 20px;
+      color: #2e7d32;
+    }
+
+    h1 {
+      color: #c62828;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #1565c0;
+      margin-bottom: 20px;
+    }
+
+    #crossword {
+      display: inline-block;
+      border: 3px solid #1565c0;
+      border-collapse: collapse;
+      margin: 20px auto;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .cell {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #444;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #fff;
+      position: relative;
+    }
+
+    .black-cell {
+      background-color: #333;
+    }
+
+    .cell input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: transparent;
+      outline: none;
+    }
+
+    .cell input:focus {
+      background-color: #e8f5e9;
+    }
+
+    .hint {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+      padding: 15px;
+      background-color: #e3f2fd;
+      border-radius: 8px;
+      border-left: 4px solid #1565c0;
+    }
+
+    button {
+      padding: 10px 25px;
+      font-size: 18px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #1b5e20;
+    }
+
+    .correct {
+      background-color: #c8e6c9;
+    }
+
+    .incorrect {
+      background-color: #ffcdd2;
+    }
+
+    .number {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      font-size: 10px;
+      color: #1565c0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 Christmas Crossword Puzzle 🎄</h1>
+  <p class="subtitle">Fill in the 5 holiday-themed English words!</p>
+
+  <div class="hint">
+    <p><strong>Across:</strong></p>
+    <p>1. A figure made of snow with a carrot nose (7 letters)</p>
+    <p>3. A decorated evergreen plant (4 letters)</p>
+    <p>4. Santa’s vehicle pulled by reindeer (7 letters)</p>
+
+    <p><strong>Down:</strong></p>
+    <p>1. A present given during the holidays (4 letters)</p>
+    <p>2. A bright shape placed on top of the tree (4 letters)</p>
+  </div>
+
+  <!-- Crossword grid: 7x7 -->
+  <table id="crossword" cellspacing="0">
+    <!-- Row 0 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="S"></td>
+      <td class="cell"><input maxlength="1" data-answer="N"></td>
+      <td class="cell"><input maxlength="1" data-answer="O"></td>
+      <td class="cell"><input maxlength="1" data-answer="W"></td>
+      <td class="cell"><input maxlength="1" data-answer="M"></td>
+      <td class="cell"><input maxlength="1" data-answer="A"></td>
+      <td class="cell"><input maxlength="1" data-answer="N"></td>
+    </tr>
+    <!-- Row 1 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="G"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="I"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="T"></td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="I"></td>
+      <td class="cell"><input maxlength="1" data-answer="T"></td>
+      <td class="cell"><input maxlength="1" data-answer="R"></td>
+      <td class="cell"><input maxlength="1" data-answer="E"></td>
+      <td class="cell"><input maxlength="1" data-answer="F"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="A"></td>
+    </tr>
+    <!-- Row 3 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="F"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="T"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="R"></td>
+    </tr>
+    <!-- Row 4 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="T"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="S"></td>
+    </tr>
+    <!-- Row 5 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="S"></td>
+      <td class="cell"><input maxlength="1" data-answer="L"></td>
+      <td class="cell"><input maxlength="1" data-answer="E"></td>
+      <td class="cell"><input maxlength="1" data-answer="I"></td>
+      <td class="cell"><input maxlength="1" data-answer="G"></td>
+      <td class="cell"><input maxlength="1" data-answer="H"></td>
+      <td class="cell"><input maxlength="1" data-answer="T"></td>
+    </tr>
+    <!-- Row 6 -->
+    <tr>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+    </tr>
+  </table>
+
+  <button onclick="checkAnswers()">Check Answers</button>
+
+  <script>
+    function checkAnswers() {
+      const inputs = document.querySelectorAll('.cell input');
+      inputs.forEach(input => {
+        const userVal = input.value.trim().toUpperCase();
+        const correctVal = input.dataset.answer || '';
+        // Remove previous styles
+        input.classList.remove('correct', 'incorrect');
+        if (userVal === correctVal) {
+          input.classList.add('correct');
+        } else if (userVal !== '') {
+          input.classList.add('incorrect');
+        }
+      });
+    }
+
+    // Allow typing one letter and auto-focus next
+    document.querySelectorAll('.cell input').forEach((input, index, all) => {
+      input.addEventListener('input', function() {
+        if (this.value.length === 1) {
+          // Move to next input
+          let next = all[index + 1];
+          if (next && !next.closest('.black-cell')) {
+            next.focus();
+          }
+        }
+      });
+
+      // Allow backspace to go to previous
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Backspace' && !this.value && index > 0) {
+          let prev = all[index - 1];
+          if (prev) prev.focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

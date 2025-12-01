@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Новогодний кроссворд</.title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #d32f2f;
+    }
+
+    #crossword {
+      display: inline-block;
+      margin: 20px auto;
+      border: 2px solid #333;
+    }
+
+    .cell {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #555;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #fff;
+    }
+
+    .black-cell {
+      background-color: #333;
+    }
+
+    .cell input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: transparent;
+    }
+
+    .cell input:focus {
+      outline: 2px solid #007bff;
+    }
+
+    .hint {
+      margin: 10px 0;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .correct {
+      background-color: #c8e6c9;
+    }
+
+    .incorrect {
+      background-color: #ffcdd2;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 Новогодний кроссворд 🎄</h1>
+
+  <div class="hint">
+    <p><strong>Слова по горизонтали:</strong></p>
+    <p>1. Зимняя игрушка из снега (8 букв)</p>
+    <p>2. Душистое дерево, главный символ праздника (4 буквы)</p>
+    <p>3. Волшебник с посохом и мешком подарков (8 букв)</p>
+    <p>4. То, что получают под ёлкой (7 букв)</p>
+    <p>5. Цитрусовый фрукт, ассоциирующийся с Новым годом (9 букв)</p>
+
+    <p><strong>Слова по вертикали:</strong></p>
+    <p>6. Украшение-взрывушка (8 букв)</p>
+    <p>7. Часть лица снеговика — часто морковка (3 буквы)</p>
+    <p>8. Яркие светящиеся нити на ёлке (7 букв)</p>
+    <p>9. Блестящие круглые игрушки на ёлке (4 буквы)</p>
+    <p>10. Звенящий новогодний аксессуар (11 букв)</p>
+  </div>
+
+  <!-- Кроссворд 11x11 -->
+  <table id="crossword" cellspacing="0">
+    <!-- Строка 0 -->
+    <tr>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="С"></td>
+      <td class="cell"><input maxlength="1" data-answer="Н"></td>
+      <td class="cell"><input maxlength="1" data-answer="Е"></td>
+      <td class="cell"><input maxlength="1" data-answer="Г"></td>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="cell"><input maxlength="1" data-answer="В"></td>
+      <td class="cell"><input maxlength="1" data-answer="И"></td>
+      <td class="cell"><input maxlength="1" data-answer="К"></td>
+      <td class="black-cell"></td>
+    </tr>
+    <!-- Строка 1 -->
+    <tr>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="Ё"></td>
+      <td class="cell"><input maxlength="1" data-answer="Л"></td>
+      <td class="cell"><input maxlength="1" data-answer="К"></td>
+      <td class="cell"><input maxlength="1" data-answer="А"></td>
+      <td class="cell"><input maxlength="1" data-answer=""></td>
+      <td class="cell"><input maxlength="1" data-answer=""></td>
+      <td class="cell"><input maxlength="1" data-answer=""></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="И"></td>
+      <td class="black-cell"></td>
+    </tr>
+    <!-- Строка 2 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="Д"></td>
+      <td class="cell"><input maxlength="1" data-answer="Е"></td>
+      <td class="cell"><input maxlength="1" data-answer="Д"></td>
+      <td class="cell"><input maxlength="1" data-answer="М"></td>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="cell"><input maxlength="1" data-answer="Р"></td>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="cell"><input maxlength="1" data-answer="З"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="Н"></td>
+      <td class="black-cell"></td>
+    </tr>
+    <!-- Строка 3 -->
+    <tr>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="П"></td>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="cell"><input maxlength="1" data-answer="Д"></td>
+      <td class="cell"><input maxlength="1" data-answer="А"></td>
+      <td class="cell"><input maxlength="1" data-answer="Р"></td>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="cell"><input maxlength="1" data-answer="К"></td>
+      <td class="cell"><input maxlength="1" data-answer="К"></td>
+      <td class="black-cell"></td>
+    </tr>
+    <!-- Строка 4 -->
+    <tr>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="М"></td>
+      <td class="cell"><input maxlength="1" data-answer="А"></td>
+      <td class="cell"><input maxlength="1" data-answer="Н"></td>
+      <td class="cell"><input maxlength="1" data-answer="Д"></td>
+      <td class="cell"><input maxlength="1" data-answer="А"></td>
+      <td class="cell"><input maxlength="1" data-answer="Р"></td>
+      <td class="cell"><input maxlength="1" data-answer="И"></td>
+      <td class="cell"><input maxlength="1" data-answer="Н"></td>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="cell"><input maxlength="1" data-answer="Л"></td>
+    </tr>
+    <!-- Строка 5 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="Х"></td>
+      <td class="cell"><input maxlength="1" data-answer="Л"></td>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="cell"><input maxlength="1" data-answer="П"></td>
+      <td class="cell"><input maxlength="1" data-answer="У"></td>
+      <td class="cell"><input maxlength="1" data-answer="Ш"></td>
+      <td class="cell"><input maxlength="1" data-answer="К"></td>
+      <td class="cell"><input maxlength="1" data-answer="А"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="Ь"></td>
+    </tr>
+    <!-- Строка 6 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="cell"><input maxlength="1" data-answer="Г"></td>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="cell"><input maxlength="1" data-answer="Н"></td>
+      <td class="cell"><input maxlength="1" data-answer="Ь"></td>
+      <td class="cell"><input maxlength="1" data-answer="К"></td>
+      <td class="cell"><input maxlength="1" data-answer="И"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="Ч"></td>
+    </tr>
+    <!-- Строка 7 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="Н"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="Ш"></td>
+      <td class="cell"><input maxlength="1" data-answer="А"></td>
+      <td class="cell"><input maxlength="1" data-answer="Р"></td>
+      <td class="cell"><input maxlength="1" data-answer="Ы"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="И"></td>
+    </tr>
+    <!-- Строка 8 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="К"></td>
+    </tr>
+    <!-- Строка 9 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="С"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="О"></td>
+    </tr>
+    <!-- Строка 10 -->
+    <tr>
+      <td class="cell"><input maxlength="1" data-answer="Т"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="black-cell"></td>
+      <td class="cell"><input maxlength="1" data-answer="Ь"></td>
+    </tr>
+  </table>
+
+  <button onclick="checkAnswers()">Проверить</button>
+
+  <script>
+    function checkAnswers() {
+      const inputs = document.querySelectorAll('.cell input');
+      inputs.forEach(input => {
+        const userValue = input.value.trim().toUpperCase();
+        const correctValue = input.dataset.answer || '';
+        // Сброс стилей
+        input.classList.remove('correct', 'incorrect');
+        if (userValue === correctValue) {
+          input.classList.add('correct');
+        } else if (userValue !== '') {
+          input.classList.add('incorrect');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
