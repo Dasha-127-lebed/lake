@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Новогодний кроссворд</.title>
+  <title>Новогодний кроссворд</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -268,7 +268,6 @@
       inputs.forEach(input => {
         const userValue = input.value.trim().toUpperCase();
         const correctValue = input.dataset.answer || '';
-        // Сброс стилей
         input.classList.remove('correct', 'incorrect');
         if (userValue === correctValue) {
           input.classList.add('correct');
