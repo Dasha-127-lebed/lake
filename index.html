@@ -2,13 +2,51 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой блог</title>
-    <!-- Подключаем CSS-файл -->
-    <link rel="stylesheet" href="style.css">
+    <meta name="webtoken" content="width=device-width, initial-scale=1.0">
+    <title>Анализ документа</title>
+    <style>
+        body {
+            background-color: #ffffff; /* светлый фон */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            color: #000000;
+        }
+        .content {
+            max-width: 800px;
+            padding: 20px;
+        }
+        .content p {
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+        .content blockquote {
+            margin: 16px 0;
+            padding-left: 20px;
+            border-left: 3px solid #ccc;
+            text-align: left;
+            font-style: italic;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <a href="krossvordRU.html">Русский кроссворд</a><br>
-    <a href="krossvordEN.html">английский кроссворд</a><br>
+    <div class="content">
+        <p>Слово <strong>«куратор»</strong> встречается в предоставленном тексте <strong>2 раза</strong>.</p>
+        <p>Вот контексты, в которых оно используется:</p>
+
+        <p><strong>1. Пункт 5.3:</strong></p>
+        <blockquote>«Куратор имеет право выяснить причины отсутствия у обучающегося и его родителей (законных представителей);»</blockquote>
+
+        <p><strong>2. Пункт 5.4.16:</strong></p>
+        <blockquote>«самовольно покидать колледж во время образовательного процесса, а при необходимости только с разрешения куратора или иного уполномоченного лица;»</blockquote>
+
+        <p>Больше в тексте слово «куратор» не встречается.</p>
+    </div>
 </body>
 </html>
