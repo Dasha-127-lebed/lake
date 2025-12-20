@@ -1,1 +1,145 @@
-<source src="snowflakes.mp4" type="video/mp4">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рождественский Блог</title>
+    <!-- Подключаем шрифт Pudelinka -->
+    <link href="https://fonts.googleapis.com/css2?family=Pudelinka&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            display: none;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .kolyadka {
+            font-family: 'Pudelinka', cursive;
+            font-size: 1.6em;
+            line-height: 1.4;
+            color: #d35400;
+            margin: 30px 0;
+            padding: 20px;
+            background: #fff8e1;
+            border-left: 5px solid #f39c12;
+            border-radius: 8px;
+        }
+        .watch-video-btn {
+            padding: 12px 24px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1.1em;
+            margin: 20px 0;
+        }
+        .watch-video-btn:hover {
+            background: #c0392b;
+        }
+        .crossword-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .crossword-btn {
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .crossword-btn:hover {
+            background: #2980b9;
+        }
+        footer {
+            margin-top: auto;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎄 Рождественский Блог 🎄</h1>
+
+        <!-- Кнопка для показа видео -->
+        <button class="watch-video-btn" id="showVideoBtn">▶️ СМОТРЕТЬ ВИДЕО</button>
+
+        <!-- Видео (скрыто по умолчанию) -->
+        <div class="video-container" id="videoContainer">
+            <video controls width="100%">
+                <source src="snowflakes.mp4" type="video/mp4">
+                ❌ Видео не поддерживается. 
+                <a href="snowflakes.mp4" download>Скачать видео</a>.
+            </video>
+        </div>
+
+        <!-- Колядка из 4 строк -->
+        <div class="kolyadka">
+            Зима в окне — как будто сказка,<br>
+            Снег покрыл весь мир до края.<br>
+            Звенят колокольчики, зовут нас,<br>
+            Праздник Рождества — вот он, наш!
+        </div>
+
+        <!-- Ссылки на кроссворды -->
+        <div class="crossword-links">
+            <a href="krossvordRU.html" class="crossword-btn">Русский кроссворд</a>
+            <a href="krossvordEN.html" class="crossword-btn">Английский кроссворд</a>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 | Создано с любовью для праздника
+    </footer>
+
+    <!-- JavaScript для показа видео -->
+    <script>
+        document.getElementById('showVideoBtn').addEventListener('click', function() {
+            const container = document.getElementById('videoContainer');
+            container.style.display = 'block';
+            this.style.display = 'none';
+            const video = container.querySelector('video');
+            video.play().catch(e => console.log("Авто-воспроизведение заблокировано:", e));
+        });
+    </script>
+</body>
+</html>
