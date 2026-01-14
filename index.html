@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новогодний Блог</title>
-    <!-- Подключаем красивый и читаемый шрифт для колядки -->
+    <title>Новогодний Блог и Структура Домена</title>
+    <!-- Подключаем красивый шрифт для колядки -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #f9e8e8 0%, #e6c2c2 100%); /* Нежно-бордовый градиент */
+            background: linear-gradient(135deg, #f9e8e8 0%, #e6c2c2 100%);
             margin: 0;
             padding: 20px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -99,7 +99,6 @@
             border: 3px solid #f2e6e6;
         }
 
-        /* Новый шрифт для колядки — красивый и читаемый */
         .kolyadka-title {
             font-family: 'Dancing Script', cursive;
             font-size: 3em;
@@ -112,7 +111,7 @@
 
         .kolyadka {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.3em; /* Чётко читаемый размер */
+            font-size: 2.3em;
             font-weight: 600;
             color: #a93226;
             margin: 20px 0 35px;
@@ -122,7 +121,6 @@
             line-height: 1.5;
             border: 3px solid #e8c4c4;
             box-shadow: inset 0 0 8px rgba(232, 196, 196, 0.5);
-            /* Убран text-transform: uppercase — Dancing Script лучше смотрится в обычном регистре */
         }
 
         .crossword-links {
@@ -149,6 +147,60 @@
             transform: translateY(-2px);
         }
 
+        /* === Стили для второго блога (о домене) === */
+        .blog-section {
+            margin-top: 40px;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .blog-section h2 {
+            color: #8b0000;
+            text-align: center;
+            margin: 30px 0 20px;
+            font-size: 2.4em;
+        }
+
+        .blog-section p, .blog-section ul, .blog-section blockquote {
+            margin-bottom: 18px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background-color: #fdf3f3;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #a93226;
+            font-weight: bold;
+        }
+
+        .email-link {
+            text-align: center;
+            margin: 0 0 25px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .email-link a {
+            color: #8b0000;
+            text-decoration: none;
+        }
+
+        .email-link a:hover {
+            text-decoration: underline;
+        }
+
+        blockquote {
+            background-color: #fdf3f3;
+            border-left: 4px solid #a93226;
+            padding: 14px 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+        }
+
         footer {
             margin-top: 30px;
             color: #8b0000;
@@ -160,6 +212,8 @@
     </style>
 </head>
 <body>
+
+    <!-- === НОВОГОДНИЙ БЛОГ === -->
     <div class="container">
         <h1>🎄 Новогодний Блог 🎄</h1>
 
@@ -189,8 +243,75 @@
         </div>
     </div>
 
+    <!-- === БЛОГ О ДОМЕННОМ ИМЕНИ === -->
+    <div class="container blog-section">
+        <h2>Как устроено доменное имя моего сайта</h2>
+
+        <div class="email-link">
+            Напишите мне: <a href="mailto:gryaznova.dashulya@yandex.ru">gryaznova.dashulya@yandex.ru</a>
+        </div>
+
+        <p>
+            Привет! Меня зовут <strong>Грязнова Дарья Романовна</strong>, и сегодня я расскажу, как устроено доменное имя моего сайта:<br>
+            <span class="highlight">https://dasha-127-lebed.github.io/lebed/</span>
+        </p>
+
+        <p>
+            Важно понимать: часть после последнего слэша — <span class="highlight">/lebed/</span> — это не часть домена, а путь к конкретной папке или странице на моём сайте. Поэтому при разборе доменного имени я рассматриваю только хост:<br>
+            <span class="highlight">dasha-127-lebed.github.io</span>
+        </p>
+
+        <h3>Из чего состоит мой домен?</h3>
+
+        <h4>1. Корневой домен (Root)</h4>
+        <ul>
+            <li>Он всегда присутствует технически, но почти никогда не отображается. Выглядит как точка в конце: <span class="highlight">dasha-127-lebed.github.io.</span></li>
+            <li>Это самый верхний уровень всей DNS-системы — уровень 0.</li>
+        </ul>
+
+        <h4>2. Домен верхнего уровня — .io</h4>
+        <ul>
+            <li>Мой сайт использует домен <span class="highlight">.io</span>. Изначально он был выделен для Британских территорий в Индийском океане, но сейчас его часто выбирают IT-проекты и разработчики.</li>
+            <li>Это уровень 1 в иерархии.</li>
+        </ul>
+
+        <h4>3. Домен второго уровня — github</h4>
+        <ul>
+            <li>Часть <span class="highlight">github</span> — это официальный домен компании GitHub, которая предоставляет мне бесплатный хостинг через GitHub Pages.</li>
+            <li>Это уровень 2.</li>
+        </ul>
+
+        <h4>4. Мой поддомен — dasha-127-lebed</h4>
+        <ul>
+            <li>Это имя моего аккаунта на GitHub. Когда я создаю сайт через GitHub Pages, система автоматически даёт мне адрес вида <span class="highlight">&lt;мой-логин&gt;.github.io</span>.</li>
+            <li>Это самый конкретный уровень — уровень 3.</li>
+        </ul>
+
+        <blockquote>
+            <strong>Вся иерархия моего домена выглядит так (от корня к концу):</strong><br>
+            <span class="highlight">. → io → github → dasha-127-lebed</span>
+        </blockquote>
+
+        <h4>А что такое /lebed/?</h4>
+        <p>
+            Это путь к одному из моих проектов. У меня есть репозиторий с названием <span class="highlight">lebed</span>, и GitHub Pages размещает его по адресу:<br>
+            <span class="highlight">https://dasha-127-lebed.github.io/lebed/</span>
+        </p>
+        <p>
+            То есть:
+        </p>
+        <ul>
+            <li><strong>Домен</strong> — это мой «адрес в интернете»: <span class="highlight">dasha-127-lebed.github.io</span></li>
+            <li><strong>Путь</strong> — это «комната» внутри этого дома: <span class="highlight">/lebed/</span></li>
+        </ul>
+
+        <p>
+            Надеюсь, теперь стало понятнее, как устроены веб-адреса! Я сама недавно разобралась в этом — и делюсь с вами, чтобы было проще начать.
+        </p>
+    </div>
+
     <footer>
-        © 2025 | С новогодним теплом и звоном колокольчиков 🎄
+        © 2025–2026 | С новогодним теплом и звоном колокольчиков 🎄
     </footer>
 
     <script>
