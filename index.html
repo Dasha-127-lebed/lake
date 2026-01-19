@@ -19,6 +19,15 @@
             min-height: 100vh;
         }
 
+        #current-date {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #8b0000;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+        }
+
         .container {
             max-width: 780px;
             width: 100%;
@@ -27,7 +36,7 @@
             border-radius: 24px;
             box-shadow: 0 8px 30px rgba(128, 0, 32, 0.25);
             text-align: center;
-            margin-top: 20px;
+            margin-top: 0;
             border: 4px solid #e6b3b3;
             position: relative;
             overflow: hidden;
@@ -99,7 +108,6 @@
             border: 3px solid #f2e6e6;
         }
 
-        /* Новый шрифт для колядки — красивый и читаемый */
         .kolyadka-title {
             font-family: 'Dancing Script', cursive;
             font-size: 3em;
@@ -112,7 +120,7 @@
 
         .kolyadka {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.3em; /* Чётко читаемый размер */
+            font-size: 2.3em;
             font-weight: 600;
             color: #a93226;
             margin: 20px 0 35px;
@@ -122,7 +130,25 @@
             line-height: 1.5;
             border: 3px solid #e8c4c4;
             box-shadow: inset 0 0 8px rgba(232, 196, 196, 0.5);
-            /* Убран text-transform: uppercase — Dancing Script лучше смотрится в обычном регистре */
+        }
+
+        .cipher-block {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.5em;
+            text-align: left;
+            padding: 20px;
+            background: #fdf3f3;
+            border-radius: 16px;
+            border: 2px solid #e8c4c4;
+            margin: 25px 0;
+            line-height: 1.6;
+        }
+
+        .cipher-block code {
+            background: #ffe6e6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
         }
 
         .crossword-links {
@@ -160,6 +186,9 @@
     </style>
 </head>
 <body>
+    <!-- Текущая дата СРАЗУ ПОД <body> -->
+    <p id="current-date">Дата публикации: 19 января 2026 г.</p>
+
     <div class="container">
         <h1>🎄 Новогодний Блог 🎄</h1>
 
@@ -187,6 +216,23 @@
             Звенят колокольчики, зовут нас,<br>
             Праздник Рождества — вот он, наш!
         </div>
+
+        <!-- =============== БЛОК ШИФРОВ ЦЕЗАРЯ (с учётом буквы «Ё») =============== -->
+        <div class="kolyadka-title" style="font-size: 2.4em;">Шифр Цезаря (с учётом «Ё»)</div>
+
+        <div class="cipher-block">
+            <p><strong>1. Ключи шифрования (алфавит: А–Я, 33 буквы, включая «Ё»):</strong></p>
+            <p>а. АПЕЛЬСИН → САЦЬНВЩЮ → ключ <code>k = 18</code></p>
+            <p>б. АБРИКОС → ЫЬЛГЕЙМ → ключ <code>k = 28</code></p>
+
+            <p><strong>2. Расшифровка (0 &lt; k &lt; 33):</strong></p>
+            <p>а. ФХНЗКЧ → при <code>k = 15</code> → <code>КОДИРО</code></p>
+            <p>б. ЦЩЕБФ → при <code>k = 12</code> → <code>ОТЧЁТ</code></p>
+
+            <p><strong>3. Шифрование фамилии с ключом 10 (с учётом «Ё»):</strong></p>
+            <p>Грязнова → <code>МЪИТЧШЛЙ</code></p>
+        </div>
+        <!-- ====================================================================== -->
 
         <div class="crossword-links">
             <a href="krossvordRU.html" class="crossword-btn">Русский кроссворд</a>
