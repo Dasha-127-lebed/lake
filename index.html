@@ -108,6 +108,35 @@
             border: 3px solid #f2e6e6;
         }
 
+        /* Стили для диаграммы */
+        .diagram-container {
+            margin: 35px 0;
+            padding: 25px;
+            background: #fdf3f3;
+            border-radius: 16px;
+            border: 3px solid #e8c4c4;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .diagram-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.4em;
+            font-weight: 700;
+            color: #8b0000;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(139, 0, 0, 0.1);
+        }
+
+        .diagram-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            border: 2px solid #f2e6e6;
+            display: block;
+            margin: 0 auto;
+        }
+
         .kolyadka-title {
             font-family: 'Dancing Script', cursive;
             font-size: 3em;
@@ -356,6 +385,13 @@
             <p><strong>3. Шифрование фамилии с ключом 10 (с учётом «Ё»):</strong></p>
             <p>Грязнова → <code>МЪИТЧШЛЙ</code></p>
         </div>
+
+        <!-- =============== БЛОК С ДИАГРАММОЙ =============== -->
+        <div class="diagram-container">
+            <div class="diagram-title">📊 Схема стоматологии</div>
+            <img src="diagram.png" alt="Диаграмма стоматологии" class="diagram-image">
+        </div>
+        <!-- ================================================ -->
 
     </div>
 
